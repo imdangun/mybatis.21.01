@@ -20,6 +20,15 @@
 				<property name='username' value='${username}'/>
 				<property name='password' value='${password}'/>
 			</dataSource>
+		</environment>
+		<environment id='hr'>
+			<transactionManager type='JDBC'/>
+			<dataSource type='POOLED'>
+				<property name='driver' value='${driver}'/>
+				<property name='url' value='${url}'/>
+				<property name='username' value='hr'/>
+				<property name='password' value='hr'/>
+			</dataSource>
 		</environment>		
 	</environments>
 	
@@ -39,5 +48,7 @@
 		<mapper resource='ch05/ex04/sqlMap.xml'/>
 		<mapper resource='ch05/ex05/sqlMap.xml'/>
 		<mapper resource='ch05/ex06/sqlMap.xml'/>
+		<mapper resource='ch05/ex07/sqlMap.xml'/>
+		<mapper resource='ch06/dao/map/sqlMap.xml'/>
 	</mappers>
 </configuration>
