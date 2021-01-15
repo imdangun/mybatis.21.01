@@ -6,6 +6,11 @@
 		<property name='driver' value='oracle.jdbc.driver.OracleDriver'/>
 	</properties>
 	
+	<settings>
+		<setting name='cacheEnabled' value='false'/>
+		<setting name='localCacheScope' value='STATEMENT'/>	
+	</settings>
+	
 	<typeAliases>
 		<typeAlias type='ch02.domain.User' alias='user'/>
 		<package name='ch03.domain'/>
