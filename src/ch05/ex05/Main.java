@@ -8,5 +8,6 @@ public class Main {
 		
 		System.out.println(mapper.selectUsers("king")); 
 		// [2 king 2025-05-15 null]
-	}
+	} 
 }
+
