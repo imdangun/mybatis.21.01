@@ -1,6 +1,6 @@
 package config;
 
-import java.io.InputStream;
+import java.io.Reader;
 
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSessionFactory;
@@ -11,10 +11,10 @@ public class Configuration {
 	
 	static {
 		try {
-			//Reader reader = Resources.getResourceAsReader("config/sqlMapConfig.xml");
-			//sqlSessionFactory = new SqlSessionFactoryBuilder().build(reader);			
-			InputStream stream = Resources.getResourceAsStream("config/sqlMapConfig.xml");
-			sqlSessionFactory = new SqlSessionFactoryBuilder().build(stream, "hr");
+			Reader reader = Resources.getResourceAsReader("config/sqlMapConfig.xml");
+			sqlSessionFactory = new SqlSessionFactoryBuilder().build(reader);			
+//			InputStream stream = Resources.getResourceAsStream("config/sqlMapConfig.xml");
+//			sqlSessionFactory = new SqlSessionFactoryBuilder().build(stream, "hr");
 		} catch(Exception e) {
 			e.printStackTrace();
 		}
